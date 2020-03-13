@@ -1,0 +1,62 @@
+$colors: (
+		white: (
+				primary: #ffffff
+		),
+		blue: (
+				primary: #014593,
+				light: #cfdbe9,
+				normal: #014493,
+				background: rgba(1, 69, 147, 0.7)
+		),
+		yellow: (
+				primary: #ffdfba
+		),
+		gray: (
+				primary: #ab9a88,
+				light: #ecf0ff,
+				border: #dfe3e8,
+				bg: #d8d8d8
+		),
+		shadow: (
+				lightBlue: rgba(217, 225, 255, 0.5)
+		)
+);
+$font-size: (
+		px: (
+				h1: 60px,
+				mobileH1: 26px,
+				h2: 48px,
+				h3: 32px,
+				h3Nav: 16px,
+				h4Nav: 13px,
+				pBig: 21px,
+				smaller: 13px,
+				default: 16px,
+				linkSmall: 14px,
+				smallText: 10px
+		)
+);
+$font-weight: (
+		default: (
+				normal: 400,
+				medium: 600,
+		)
+);
+$z-indexes: (
+		"modal",
+		"dropdown-nav",
+		"dropdown-before",
+		"site-header",
+		"overflow",
+		"site-footer",
+		"hero-content",
+		"overlayer"
+);
+// text align
+$textsides: (left, center, right);
+@each $tside in $textsides {
+		.#{$tside}-align {
+				text-align: $tside !important;
+		}
+}
+$sides: (all, top, bottom, left, right);

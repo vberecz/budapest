@@ -1,0 +1,21 @@
+.hero{
+		@include padding($top:151px, $bottom:157px);
+		width:100%;
+		@include position(relative);
+		.hero-overlayer{
+				@include position(absolute, 0, 0, 0, 0);
+				width:100%;
+				height:100%;
+				z-index: z('overlayer');
+				background: color(blue, background);
+		}
+		.hero-content{
+				@include position(relative);
+				z-index: z('hero-content');
+		}
+}
+@media only screen and (max-width: 767px) {
+		.hero{
+				@include padding($top:80px, $bottom:40px);
+		}
+}

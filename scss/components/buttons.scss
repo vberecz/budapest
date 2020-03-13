@@ -1,0 +1,61 @@
+.btn{
+		&--primary{
+				color: color(blue, normal);
+				background-color: color(yellow, primary);
+				@include padding-side(11px, 26px);
+				@include border-radius(57px);
+				@include margin($top:76px);
+		}
+		&--header{
+				background-color: color(white, primary);
+				color: color(blue, primary);
+				@include position(relative);
+				@include padding(5px, 48px, 7px, 11px);
+				@include border-radius(57px);
+				@include margin($left:20px);
+				&--chat, &--login{
+						.icon{
+								@include position(absolute, $top:7px, $right:9px);
+						}
+				}
+				&--bordered{
+						border: 1px solid color(blue, primary);
+				}
+		}
+}
+.dropbtn{
+		background-color: transparent;
+		border:none;
+		color: color(white, primary);
+}
+
+@media only screen and (max-width: 767px) {
+		.btn{
+				&--primary{
+						@include margin($top:54px);
+				}
+		}
+		.header-btn-container{
+				.btn--header{
+						background-color: transparent;
+						@include padding-all-side(0);
+						.btn-text{display:none;}
+						.icon{
+								@include position(relative);
+								svg{
+										path{
+												stroke:color(white, primary);
+										}
+								}
+						}
+				}
+		}
+		.content-block{
+				.content{
+						img{display:none;}
+						p{
+								@include no-margin-padding();
+						}
+				}
+		}
+}

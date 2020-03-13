@@ -1,0 +1,279 @@
+header {
+		@include position(fixed, $top: 13px, $left: 0);
+		width: 100%;
+		z-index: z('site-header');
+		.header-container {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.showMobileNav {
+						display: none;
+						align-items: center;
+						width: 20px;
+						height: 16px;
+						cursor: pointer;
+						.mobileIcon {
+								width: 20px;
+								height: 2px;
+								background-color: color(white, primary);
+								span {
+										width: 20px;
+										height: 2px;
+										background-color: color(white, primary);
+										@include position(relative);
+										&:after, &:before {
+												content: '';
+												@include position(absolute, $top: 7px);
+												width: 20px;
+												height: 2px;
+												background-color: color(white, primary);
+										}
+										&:before {
+												@include position(absolute, $top: -7px);
+										}
+								}
+						}
+				}
+				.logo {
+						//flex: 1;
+						display: flex;
+						align-items: center;
+						@include margin($right: 90px);
+				}
+				.header-btn-container {
+						//flex: 1;
+						display: flex;
+						justify-content: flex-end;
+						align-items: center;
+				}
+		}
+		.mobileNavContainer {
+				.mobileNavBtn {
+						display: none;
+				}
+				@include position(absolute, $top: -13px, $left: 0);
+				@include padding(13px, $right: 55px, $left: 85px);
+				max-width: 531px;
+				min-width: 500px;
+				height: 100vh;
+				z-index: z('dropdown-nav');
+				background-color: color(white, primary);
+				-webkit-transform: translateX(-100%);
+				transform: translateX(-100%);
+				-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+				will-change: transform;
+				transition-duration: .8s;
+				transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+				transition-property: transform;
+				transition-property: transform, -webkit-transform;
+				overflow: visible;
+				overflow-y: auto;
+				@include transition(all 100ms linear);
+				&.is-open {
+						-webkit-transform: translateX(0);
+						transform: translateX(0);
+						box-shadow: 0px 6px 12px rgba(27, 39, 56, 0.302256);
+						.close-icon {
+								@include position(absolute, $top: 25px, $right: 55px);
+								width: 18px;
+								height: 18px;
+								opacity: 0.3;
+								cursor: pointer;
+								&:hover {
+										opacity: 1;
+								}
+								&:before, &:after {
+										@include position(absolute, $left: 15px);
+										content: '';
+										height: 18px;
+										width: 2px;
+										background-color: color(blue, normal);
+										@include rotate(-45deg);
+								}
+								&:before {
+										@include rotate(45deg);
+								}
+						}
+						.mobileNavContent-box {
+								@include margin($top: 26px);
+								.mobileNavContent {
+										.row {
+												display: block;
+										}
+										a {
+												display: block;
+												&.btn {
+														display: inline-block;
+												}
+										}
+										border-bottom: 1px solid color(gray, border);
+										@include padding($bottom: 16px);
+										@include margin($bottom: 21px);
+										.select-box {
+												display: inline-block;
+												@include position(relative);
+												label {
+														display: none;
+												}
+												select {
+														margin: 0 auto;
+														-webkit-appearance: none;
+														-moz-appearance: none;
+														appearance: none;
+														background: transparent;
+														text-shadow: none;
+														border: none;
+														color: color(gray, primary);
+														@include font-size(linkSmall, px);
+												}
+												img {
+														@include position(absolute, $left: -30px);
+												}
+										}
+										&:last-child {
+												border: none;
+												@include padding($top: 30px);
+										}
+								}
+						}
+				}
+		}
+}
+
+.mobileOverflow {
+		@include position(absolute, 0, 0, 0, 0);
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+		display: none;
+		z-index: z('overflow');
+		&.show {
+				display: block;
+		}
+}
+.loggedIn{
+		@include margin($top:31px,  $left:33px, $right:33px);
+		@include padding($bottom:16px);
+		border-bottom: 1px solid color(gray, border);
+		.profile-img-box{
+				width:40px;
+				height:40px;
+				background-color: color(gray, bg);
+				@include position(relative);
+				@include border-radius(100%);
+				overflow: hidden;
+				display:flex;
+				align-items: center;
+				@include margin($right:15px, $left:13px);
+				img{
+						display:block;
+						width:100%;
+				}
+		}
+		.profile-name-box{
+				span{
+						display:block;
+						color: color(blue, primary);
+						line-height: 20px;
+						&:first-child{
+								@include font-size(smallText, px);
+						}
+						&:last-child{
+								@include font-size(linkSmall, px);
+						}
+				}
+		}
+		.profile-link{
+				@include margin($top: 20px, $left: 0, $right: 0);
+				a{
+						display: block;
+						width: 100%;
+				}
+		}
+}
+
+@media only screen and (max-width: 1024px) {
+		header {
+				.header-container {
+						.showMobileNav {
+								display: flex;
+								@include margin($right: 10px);
+						}
+						.header-btn-container {
+								flex: auto;
+						}
+				}
+		}
+		.mobileNavContent-box{
+				.mobileNavContent{
+						.btn--header{
+								@include margin-all-side(0px);
+								&:first-child {
+										@include margin($right: 20px);
+								}
+						}
+				}
+		}
+}
+
+@media only screen and (max-width: 767px) {
+		header {
+				.mobileNavContainer {
+						min-width: 100%;
+						@include padding-all-side(0px);
+						.logo{
+								@include padding(13px, 23px, 9px, 23px);
+								border-bottom:1px solid color(gray, border);
+								display: flex;
+								align-items: center;
+								.closeMobileNav{
+										width: 20px;
+										height: 20px;
+										@include margin($right:10px);
+										span {
+												width: 20px;
+												height: 2px;
+												background-color: color(blue, primary);
+												top: 10px;
+												display: block;
+												@include position(relative);
+												&:after, &:before {
+														content: '';
+														@include position(absolute, $top: 7px);
+														width: 20px;
+														height: 2px;
+														background-color: color(blue, primary);
+												}
+												&:before {
+														@include position(absolute, $top: -7px);
+												}
+										}
+								}
+						}
+						.close-icon{
+								right:20px !important;
+						}
+						.mobileNavContent-box{
+								@include padding(13px, $right: 23px, $left: 23px);
+								.mobileNavContent{
+										.btn--header{
+												@include margin-all-side(0px);
+												&:first-child {
+														@include margin($right: 20px);
+												}
+										}
+								}
+						}
+						.mobileNavBtn{
+								@include margin(30px, 23px, 0px, 23px);
+								@include padding($bottom:30px);
+								border-bottom:1px solid color(gray, border);
+								display:block;
+								.btn--primary{
+										@include margin($top:20px);
+								}
+						}
+				}
+		}
+}

@@ -1,0 +1,80 @@
+@mixin css3-prefix($property, $value) {
+		-webkit-#{$property}: #{$value};
+		-moz-#{$property}: #{$value};
+		-ms-#{$property}: #{$value};
+		-o-#{$property}: #{$value};
+		#{$property}: #{$value};
+}
+@mixin fontFace($family, $src, $style: normal, $weight: normal) {
+		@font-face {
+				font-family: $family;
+				src: url('#{$src}.eot');
+				src: url('#{$src}.eot?#iefix') format('embedded-opentype'),
+				url('#{$src}.woff') format('woff'),
+				url('#{$src}.woff2') format('woff2'),
+				url('#{$src}.ttf') format('truetype');
+				font-style: $style;
+				font-weight: $weight;
+		}
+}
+@mixin font-size($font-size: default, $type: px) {
+		font-size: font-size($font-size, $type);
+}
+@mixin font ($font-size:default, $fonttype: px, $font-weight:normal, $lineheight: default){
+		font-size: font-size($font-size, $fonttype);
+		font-weight: font-weight($font-weight);
+		line-height: $lineheight;
+}
+@mixin letter-spacing ($letter-spacing){
+		letter-spacing: letterspace($letter-spacing);
+}
+@mixin padding($top: 0px, $right: 0px, $bottom: 0px, $left: 0px) {
+		padding: $top $right $bottom $left;
+}
+@mixin border-radius($radius: 4px) {
+		@include css3-prefix('border-radius', $radius);
+}
+@mixin padding-side($topbottom: 0, $leftright: 0) {
+		padding: $topbottom $leftright;
+}
+
+@mixin padding-all-side($allside: 0) {
+		padding: $allside;
+}
+
+@mixin margin($top: 0, $right: 0, $bottom: 0, $left: 0) {
+		margin: $top $right $bottom $left;
+}
+
+@mixin margin-side($topbottom: 0, $leftright: 0) {
+		margin: $topbottom $leftright;
+}
+
+@mixin margin-all-side($allside: 0) {
+		margin: $allside;
+}
+
+@mixin no-margin-padding($margin: 0, $padding: 0) {
+		margin: $margin !important;
+		padding: $padding !important;
+}
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+		position: $position;
+		top: $top;
+		right: $right;
+		bottom: $bottom;
+		left: $left;
+}
+@mixin rotate ($deg) {
+		@include transform(rotate(#{$deg}));
+}
+@mixin translate ($x, $y) {
+		@include transform(translate($x, $y));
+}
+@mixin box-shadow($shadows: none, $type: custom) {
+		box-shadow: shadows($shadows, $type);
+}
+.no-margin-padding{
+		margin:0 !important;
+		padding:0 !important;
+}

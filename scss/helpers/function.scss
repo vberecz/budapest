@@ -1,0 +1,34 @@
+@function mapping($map, $key, $parse: false) {
+		@if not map-has-key($map, $key) {
+				@warn 'Unknown key: `#{$key}` in map: #{$map}';
+				@return null;
+		}
+		@if not $parse {
+				@return map-get($map, $key);
+		} @else {
+				@return #{map-get($map, $key)};
+		}
+}
+@function color($color, $tone: 'primary') {
+		@return map-get(map-get($colors, $color), $tone);
+}
+@function font-size($key: default, $map: rem) {
+		@return mapping(mapping($font-size, $map), $key);
+}
+@function font-weight($key: default, $family: default) {
+		@return mapping(mapping($font-weight, $family), $key);
+}
+@function letterspace($key: default, $map: text) {
+		@return mapping(mapping($letter-spacing, $map), $key);
+}
+@function shadows($key: none, $map: custom) {
+		@return mapping(mapping($shadows, $map), $key);
+}
+@function z($name) {
+		@if index($z-indexes, $name) {
+				@return (length($z-indexes) - index($z-indexes, $name)) + 1;
+		} @else {
+				@warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
+				@return null;
+		}
+}

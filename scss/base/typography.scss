@@ -1,0 +1,89 @@
+@include fontFace('opensans-regular','../fonts/Opensans-regular');
+@include fontFace('opensans-bold','../fonts/Opensans-bold');
+
+body, html{
+		font-family: opensans-regular, sans-serif;
+		font-size: font-size(default, px);
+}
+
+p,ul,ol,dl,a,input,textarea, span {
+
+}
+
+h1,h2,h3,h4,h5,h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+		font-family: opensans-bold, sans-serif;
+		color: color(yellow,primary);
+}
+h1, .h1 {
+		@include font(h1, px, normal, 70px);
+		@include margin($top:0, $bottom: 76px);
+		&.mobileNav-head{
+				@include font(mobileH1, px, normal, 32px);
+				@include margin($top:0, $bottom: 2px);
+				color: color(blue, normal);
+		}
+}
+h2, .h2 {
+
+}
+h3, .h3 {
+		&.dropdown--title{
+				font-family: opensans-regular, sans-serif;
+				color: color(gray, primary);
+				@include font(h3Nav, px, normal, 24px);
+				@include margin($top:0, $bottom: 6px);
+		}
+}
+h4, .h4 {
+		&.dropdown--title{
+				font-family: opensans-regular, sans-serif;
+				color: color(blue, primary);
+				@include font(h4Nav, px, normal, 16px);
+				@include margin($top:0, $bottom: 0px);
+		}
+}
+h5, .h5 {
+
+}
+h6, .h6 {
+
+}
+a{
+		&.btn{
+				display: inline-block;
+				font-family: opensans-bold, sans-serif;
+				text-align: center;
+				&--header{
+						color: color(blue, primary);
+						font-family: opensans-regular, sans-serif;
+						@include font-size(smaller, px);
+				}
+		}
+		&.mobileLink{
+				color: color(gray, primary);
+				@include font(linkSmall, px, normal, 40px);
+		}
+		@media only screen and (max-width: 767px) {
+				&.btn {
+						display: block;
+				}
+		}
+}
+
+p{
+		font-family: opensans-regular, sans-serif;
+		@include font(pBig, px, normal, 30px);
+		color: color(blue, primary);
+		&.pHero{
+				font-family: opensans-bold, sans-serif;
+				@include font(pBig, px, normal, 30px);
+				color: color(white, primary);
+				max-width:620px;
+		}
+}
+.dropbtn{
+
+}
+strong {
+
+}

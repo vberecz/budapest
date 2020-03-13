@@ -1,0 +1,25 @@
+@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@media (min-width: 1200px){
+.container {
+		max-width: 970px;
+}}
+@import
+		'helpers/function',
+		'helpers/variables',
+		'helpers/mixins';
+
+@import
+		'base/normalize',
+		'base/typography';
+
+@import 'img';
+
+@import
+		'components/buttons',
+		'components/navigation';
+
+@import
+		'layout/hero',
+		'layout/header';
+
+@import 'themes/content';

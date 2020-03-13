@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Budapest</title>
+	<link rel="stylesheet" href="./dist/main.css">
+</head>
+
+<body>
+<header>
+	<div id="mobileNavContainer" class="mobileNavContainer">
+		<div class="logo">
+			<div id="closeMobileNav" class="closeMobileNav">
+				<span></span>
+			</div>
+			<a href="#">
+				<img src="./img/BP-logo-negative.svg" alt="Budapest logo" title="Budapest logo" />
+			</a>
+		</div>
+		<span id="close" class="close-icon"></span>
+		<div id="loggedIn" class="loggedIn" style="display:none;">
+			<div class="container">
+				<div class="row mobileNavContent">
+					<div class="col-12 no-margin-padding">
+						<div class="row">
+							<div class="profile-img-box">
+								<img src="./img/profile-img.png" alt="profile image" title="profile image" />
+							</div>
+							<div class="profile-name-box">
+								<span>Logged in as</span>
+								<span>Barbara Palvin</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 no-margin-padding">
+						<div class="row profile-link">
+							<a href="#" class="mobileLink">Dashboard</a>
+							<a href="#" class="mobileLink">My account</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mobileNavBtn loggedOut">
+			<a href="#" class="btn btn--primary">Start booking!</a>
+		</div>
+		<div class="mobileNavContent-box">
+			<div class="container">
+				<div class="row mobileNavContent">
+					<div class="col-12">
+						<div class="row">
+							<h1 class="mobileNav-head">Lorem ipsum</h1>
+						</div>
+					</div>
+					<div class="col-6 col-md-6">
+						<div class="row">
+							<a href="#" class="mobileLink">Sed lacinia</a>
+							<a href="#" class="mobileLink">Praesent consequat</a>
+							<a href="#" class="mobileLink">Aenean lacinia viverra</a>
+						</div>
+					</div>
+					<div class="col-6 col-md-6">
+						<div class="row">
+							<a href="#" class="mobileLink">Praesent venenatis?</a>
+							<a href="#" class="mobileLink">Etiam finibus molestie</a>
+							<a href="#" class="mobileLink">Duis varius massa</a>
+						</div>
+					</div>
+				</div>
+				<div class="row mobileNavContent loggedOut">
+					<div class="col-12">
+						<div class="row">
+							<h1 class="mobileNav-head">Dolorsit</h1>
+						</div>
+					</div>
+					<div class="col-6 col-md-6">
+						<div class="row">
+							<a href="#" class="mobileLink">Adipiscing elit</a>
+						</div>
+					</div>
+					<div class="col-6 col-md-6">
+						<div class="row">
+							<a href="#" class="mobileLink">Cogito ergo sum</a>
+						</div>
+					</div>
+				</div>
+				<div class="row mobileNavContent loggedOut">
+					<div class="col-12">
+						<div class="row">
+							<h1 class="mobileNav-head">Consectetur</h1>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="row">
+							<a href="#" class="mobileLink">Grande punto</a>
+						</div>
+					</div>
+				</div>
+				<div class="row mobileNavContent loggedOut">
+					<div class="col-6 col-md-6">
+						<div class="row">
+							<a href="#" class="mobileLink">Curabitur</a>
+							<a href="#" class="mobileLink">Ut ullamcorper</a>
+							<a href="#" class="mobileLink">Vestibulum</a>
+							<a href="#" class="mobileLink">Orci varius</a>
+						</div>
+					</div>
+					<div class="col-6 col-md-6">
+						<div class="row">
+							<a href="#" class="mobileLink">Donec vel eros</a>
+							<a href="#" class="mobileLink">Curabitur</a>
+							<a href="#" class="mobileLink">Maecenas</a>
+						</div>
+					</div>
+				</div>
+				<div class="row mobileNavContent">
+					<div class="col-md-12">
+						<div class="row center-align">
+							<div class="select-box">
+								<label for="lang">Nyelvválasztás</label>
+								<select name="lang" id="lang">
+									<option value="de">Deutch</option>
+									<option value="en" selected>English</option>
+									<option value="fr">Françias</option>
+									<option value="hu">Magyar</option>
+								</select>
+								<img src="./img/icn-pin.svg" alt="" title=""/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row mobileNavContent">
+					<div class="col-md-12">
+						<div class="row center-align">
+							<a href="#" class="btn btn--header btn--header--bordered btn--header--chat ">
+								Chat
+								<span class="icon">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+									     xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+									      d="M8.9905 1C4.57699 1 1 4.58 1 8.996C1 11.012 1.75158 12.849 2.98188 14.256L2.05241 17L5.0897 15.97C6.24305 16.618 7.5723 16.992 8.9905 16.992C13.404 16.992 16.982 13.412 16.982 8.996C16.982 4.58 13.404 1 8.9905 1Z"
+									      stroke="#014593" stroke-width="1.5" stroke-linecap="round"
+									      stroke-linejoin="round"/>
+									</svg>
+								</span>
+							</a>
+							<a href="#" onclick="toggleNav()" class="btn btn--header btn--header--bordered btn--header--login">
+								Login
+								<span class="icon">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+									     xmlns="http://www.w3.org/2000/svg">
+										<g id="login-negative">
+										<path id="Stroke 1"
+										      d="M2.5606 4.292C4.0156 2.297 6.3716 1 9.0296 1C13.4476 1 17.0296 4.583 17.0296 9C17.0296 13.419 13.4476 17 9.0296 17C6.3696 17 4.0126 15.703 2.5576 13.705"
+										      stroke="#014593" stroke-width="1.5" stroke-linecap="round"
+										      stroke-linejoin="round"/>
+										<path id="Stroke 3" d="M1 8.9971H11.188" stroke="#014593" stroke-width="1.5"
+										      stroke-linecap="round" stroke-linejoin="round"/>
+										<path id="Stroke 5" d="M9.417 6.9805L11.441 9.0055L9.427 11.0205"
+										      stroke="#014593" stroke-width="1.5" stroke-linecap="round"
+										      stroke-linejoin="round"/>
+										</g>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="header-container">
+					<div id="showMobileNav" class="showMobileNav">
+						<div class="mobileIcon">
+							<span></span>
+						</div>
+					</div>
+					<div class="logo">
+						<a href="#" aria-label="Budapest logo" tabindex="0">
+							<img src="./img/BP-logo.svg" alt="Budapest logo" title="Budapest logo"/>
+						</a>
+					</div>
+					<nav>
+						<ul>
+							<li class="dropdown">
+								<a href="#" aria-label="Lorem ipsum" tabindex="0">Lorem ipsum</a>
+								<div class="before-element"></div>
+								<div class="child-dropdown">
+									<div class="container">
+										<div class="row">
+											<div class="col-6">
+												<div class="child-dropdown-content">
+													<a href="#" aria-label="Sed lacinia" tabindex="0" class="dropdown-link">
+															<span class="dropdown-icon">
+																<img src="./img/icn-capitol.svg" alt="Sed lacinia icon" title="Sed lacinia icon"/>
+															</span>
+														<div class="dropdown-content--title-box">
+															<h3 class="dropdown--title">Sed lacinia</h3>
+															<h4 class="dropdown--title">Magna tincidunt vene</h4>
+														</div>
+													</a>
+												</div>
+												<div class="child-dropdown-content">
+													<a href="#" aria-label="Praesent" tabindex="0" class="dropdown-link">
+															<span class="dropdown-icon">
+																<img src="./img/icn-passport.svg" alt="Praesent consequat icon" title="Praesent consequat icon"/>
+															</span>
+														<div class="dropdown-content--title-box">
+															<h3 class="dropdown--title">Praesent consequat</h3>
+															<h4 class="dropdown--title">Felis sit amet vehicula molestie</h4>
+														</div>
+													</a>
+												</div>
+												<div class="child-dropdown-content">
+													<a href="#" aria-label="Praesent" tabindex="0" class="dropdown-link">
+															<span class="dropdown-icon">
+																<img src="./img/icn-ferris-wheel.svg" alt="Praesent consequat icon" title="Praesent consequat icon"/>
+															</span>
+														<div class="dropdown-content--title-box">
+															<h3 class="dropdown--title">Praesent venenatis?</h3>
+															<h4 class="dropdown--title">Class aptent taciti sociosqu ad</h4>
+														</div>
+													</a>
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="child-dropdown-content">
+													<a href="#" aria-label="Praesent" tabindex="0" class="dropdown-link">
+															<span class="dropdown-icon">
+																<img src="./img/icn-motorcycle.svg" alt="Praesent icon" title="Praesent icon"/>
+															</span>
+														<div class="dropdown-content--title-box">
+															<h3 class="dropdown--title">Praesent venenatis?</h3>
+															<h4 class="dropdown--title">Quis enim faucibus nisi convallis</h4>
+														</div>
+													</a>
+												</div>
+												<div class="child-dropdown-content">
+													<a href="#" aria-label="Etiam" tabindex="0" class="dropdown-link">
+															<span class="dropdown-icon">
+																<img src="./img/icn-bikini.svg" alt="Etiam icon" title="Etiam icon"/>
+															</span>
+														<div class="dropdown-content--title-box">
+															<h3 class="dropdown--title">Etiam finibus molestie</h3>
+															<h4 class="dropdown--title">Curabitur lobortis pellentesque
+																congue</h4>
+														</div>
+													</a>
+												</div>
+												<div class="child-dropdown-content">
+													<a href="#" aria-label="Duis" tabindex="0" class="dropdown-link">
+															<span class="dropdown-icon">
+																<img src="./img/icn-cable-car-cabin.svg" alt="Duis icon" title="Duis icon"/>
+															</span>
+														<div class="dropdown-content--title-box">
+															<h3 class="dropdown--title">Duis varius massa</h3>
+															<h4 class="dropdown--title">Praesent suscipit venenatis justo</h4>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="dropdown"><a role="menuitem" aria-label="Dolorsit" tabindex="0" href="#">Dolorsit</a></li>
+							<li class="dropdown"><a role="menuitem" aria-label="Consectetur" tabindex="0" href="#">Consectetur</a></li>
+							<li class="dropdown dropdown--language">
+								<button role="button" aria-label="languages select" onclick="dropLang()" class="dropbtn">EN</button>
+								<div id="dropLang" class="drop-content">
+									<div class="dropdown-arrow"></div>
+									<a href="#" aria-label="Deutch">Deutch</a>
+									<a href="#" aria-label="English" class="active">English</a>
+									<a href="#" aria-label="Françias">Françias</a>
+									<a href="#" aria-label="Magyar">Magyar</a>
+								</div>
+							</li>
+						</ul>
+					</nav>
+					<div class="header-btn-container">
+						<a href="#" aria-label="Chat" tabindex="0" class="btn btn--header btn--header--chat">
+							<span class="btn-text">Chat</span>
+							<span class="icon">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+								     xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M8.9905 1C4.57699 1 1 4.58 1 8.996C1 11.012 1.75158 12.849 2.98188 14.256L2.05241 17L5.0897 15.97C6.24305 16.618 7.5723 16.992 8.9905 16.992C13.404 16.992 16.982 13.412 16.982 8.996C16.982 4.58 13.404 1 8.9905 1Z"
+								      stroke="#014593" stroke-width="1.5" stroke-linecap="round"
+								      stroke-linejoin="round"/>
+								</svg>
+							</span>
+						</a>
+						<a href="#" aria-label="Login" tabindex="0" class="btn btn--header btn--header--login">
+							<span class="btn-text">Login</span>
+							<span class="icon">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+								     xmlns="http://www.w3.org/2000/svg">
+									<g id="login-negative">
+									<path id="Stroke 1"
+									      d="M2.5606 4.292C4.0156 2.297 6.3716 1 9.0296 1C13.4476 1 17.0296 4.583 17.0296 9C17.0296 13.419 13.4476 17 9.0296 17C6.3696 17 4.0126 15.703 2.5576 13.705"
+									      stroke="#014593" stroke-width="1.5" stroke-linecap="round"
+									      stroke-linejoin="round"/>
+									<path id="Stroke 3" d="M1 8.9971H11.188" stroke="#014593" stroke-width="1.5"
+									      stroke-linecap="round" stroke-linejoin="round"/>
+									<path id="Stroke 5" d="M9.417 6.9805L11.441 9.0055L9.427 11.0205"
+									      stroke="#014593" stroke-width="1.5" stroke-linecap="round"
+									      stroke-linejoin="round"/>
+									</g>
+								</svg>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<span id="closeOverflow" class="mobileOverflow"></span>
+<div class="hero">
+	<div class="hero-overlayer"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="hero-content">
+					<h1 aria-label="Welcome to Budapest!" tabindex="0">Welcome to Budapest!</h1>
+					<p aria-label="Budapest Things to do" tabindex="0" class="pHero">Budapest Things to do - detailed info about things to do: sightseeing, events,
+						restaurants, nightlife, shopping, pubs, bars, casinos and more...</p>
+					<a href="#" tabindex="0" aria-label="Start booking!" class="btn btn--primary">Start booking!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="content-block">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="content">
+					<img src="./img/illustration.svg"/>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna arcu, tempus nec urna non,
+						lacinia vehicula dolor. Integer pellentesque leo tristique nibh tristique posuere.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+    const getMenuContainer = () => document.querySelector('.mobileNavContainer');
+    const getOverflow = () => document.querySelector('.mobileOverflow');
+
+    const handleClick = (e) => {
+        const menu = getMenuContainer();
+        const overflow = getOverflow();
+        e.target.getAttribute('id') === 'showMobileNav' ? menu.classList.add("is-open") : '';
+        e.target.getAttribute('id') === 'showMobileNav' ? overflow.classList.toggle("show") : '';
+        e.target.getAttribute('id') === 'close' ? menu.classList.remove("is-open") : '';
+        e.target.getAttribute('id') === 'close' ? overflow.classList.remove("show") : '';
+        e.target.getAttribute('id') === 'closeOverflow' ? overflow.classList.remove("show") : '';
+        e.target.getAttribute('id') === 'closeOverflow' ? menu.classList.remove("is-open") : '';
+        e.target.getAttribute('id') === 'closeMobileNav' ? menu.classList.remove("is-open") : '';
+    };
+
+    document.addEventListener('click', handleClick);
+
+    let hide = function hide() {
+        let hideSection= document.querySelectorAll('.loggedOut');
+        for (let i = 0; i < hideSection.length; i++) {
+            hideSection[i].style.display = 'none';
+        }
+    }
+    let toggleNav = function loggedInNav(id) {
+        hide();
+        let loggedInNav = document.getElementById('loggedIn');
+        loggedInNav.style.display = 'block';
+    }
+    function dropLang() {
+        document.getElementById("dropLang").classList.toggle("showLang");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            let dropdowns = document.getElementsByClassName("drop-content");
+            let i;
+            for (i = 0; i < dropdowns.length; i++) {
+                let openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('showLang')) {
+                    openDropdown.classList.remove('showLang');
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

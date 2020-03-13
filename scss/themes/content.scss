@@ -1,0 +1,13 @@
+.content-block{
+		width: 100%;
+		@include position(relative);
+		@include padding($top:30px, $bottom:40px);
+		.content{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				p{
+						@include padding($left:55px);
+				}
+		}
+}
