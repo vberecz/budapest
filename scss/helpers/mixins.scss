@@ -65,6 +65,12 @@
 		bottom: $bottom;
 		left: $left;
 }
+@mixin transition($args) {
+		@include css3-prefix('transition', $args);
+}
+@mixin transform($transforms) {
+		@include css3-prefix('transform', $transforms);
+}
 @mixin rotate ($deg) {
 		@include transform(rotate(#{$deg}));
 }
